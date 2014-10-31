@@ -11,6 +11,11 @@
       margin-bottom:20px;
       padding-bottom:20px;
   }
+  
+  
+.active{
+opacity: .2
+}
 
   </style>
 
@@ -45,14 +50,39 @@
 <script src="jquery-2.1.1.min.js"></script>
 <script type="text/javascript">
 var total=0;
-console.log("hi")
+
 $( "img" ).click(function() {
-  var drug=+$(this).attr("data-dose");
-  total+=drug;
-$("#total").html(total)
 
-  });
+  // this is the dosage of the thing i just clicked
+   var drug=+$(this).attr("data-dose");
 
+
+
+   // if you ARE active... do something
+  if($(this).hasClass('active')){
+    total-=drug;
+  }
+  // if not...do something else
+  else {
+     total+=drug;
+
+   // add this dosage to the total.
+
+  }
+
+  // toggle your class
+  $(this).toggleClass('active');
+
+   // 
+  $("#total").html(total)
+  
+ if(total>=4000)
+{
+    var alertMessage = "You've Reached Your Daily Dose!";
+	alert(alertMessage)
+
+}
+});
 
   
   </script>
