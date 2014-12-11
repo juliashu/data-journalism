@@ -1,0 +1,39 @@
+<select id="race" class="select">
+    <option>Select a racial group</option>
+    <option>White</option>
+    <option>Black</option>
+    <option>Asian</option>
+    <option>Hispanic</option>
+    <option>Other</option>
+</select>
+
+<select id="age" class="select">
+    <option>Select an age group</option>
+    <option>Young</option>
+    <option>Old</option>
+</select>
+
+
+<div class = 'answer'>I am the answer</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	
+var answers = {age:"Young", race:"Black"};
+var rates = {
+	YoungBlack:5, 
+	YoungWhite:10,  
+	YoungAsian:15, 
+	YoungHispanic:25, 
+	OldBlack:3, 
+	OldWhite:9,  
+	OldAsian:13, 
+	OldHispanic:26}
+
+$('.select').change(function () {
+	answers[this.id] = this.value;
+	$(".answer").html(rates[answers.age + answers.race])
+});
+
+</script>
