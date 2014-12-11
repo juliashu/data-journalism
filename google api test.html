@@ -31,7 +31,7 @@
             // Create the data table.
             var data2 = new google.visualization.DataTable();
             data2.addColumn('string', 'Ethnicity');
-            data2.addColumn('number', 'Percent of all ethnic group waiting for 5+ years');
+            data2.addColumn('number', 'Percent waiting for 5+ Years');
             data2.addRows([
               ['White', 11.3],
           ['Black', 15.9],
@@ -61,37 +61,12 @@
             chart2.draw(data2, options2);
           }
         </script>
-		<style type="text/css">
-				// CSS goes here
-		h1{
-		}
-		h2{
-		}
-		body{
-		}
-		
-		</style>
       </head>
 
       <body>
-	  
-	  <h1>In the wait for donor kidneys, a change of plan
-	  </h1>
-	  <h2> by Julia Shu
-	  </h2>
-	  
-	  <p>Last Thursday, the United Network for Organ Sharing, UNOS, announced changes in procedure for matching donor kidneys with patients. These changes could help African American patients and other racial and ethnic groups who currently experience disproportionately long waiting periods for a donor kidney.
-	  </p>
-	  <h2> The Long Wait </h2>
-	  
-        <div id="chart_div2"></div>
-	<p>Broken down by ethnicity, the above chart shows patients who have been waiting for a donor kidney for 5 or more years. While the majority of patients receive a kidney in 1 to 2 years, a disproportionate number of non-white patients wait much longer. For example, 21.3% of Pacific Islanders waiting for a kidney wait 5+ years, and 15.9% of blacks. In contrast, only 11.3% of whites wait for this long. 
-	</p>
-	
-	
-		
+        <!--Divs that will hold the charts-->
         <div id="chart_div"></div>
-
+        <div id="chart_div2"></div>
 
       </body>
     </html>
