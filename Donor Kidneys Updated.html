@@ -1,0 +1,165 @@
+<html>
+      <head>
+        <!--Load the AJAX API-->
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+
+          // Load the Visualization API and the piechart package.
+          google.load('visualization', '1.0', {'packages':['corechart']});
+
+          // Set a callback to run when the Google Visualization API is loaded.
+          google.setOnLoadCallback(drawChart);
+
+          // Callback that creates and populates a data table,
+          // instantiates the pie chart, passes in the data and
+          // draws it.
+          function drawChart() {
+
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Ethnicity');    
+            data.addColumn('number', 'Patients ');
+            data.addRows([
+             ['White', 4312],
+			['Black', 7605],
+			['Hispanic', 2017],
+			['Asian', 2402],
+			['American Indian/Alaska Native', 73],
+			['Pacific Islander', 89],
+			['Multiracial', 116],
+            ]);
+                
+
+            // Set chart options
+            var options = {'title':'Blood Type B Patients on Kidney Waitlist',
+                           'width':1000,
+                           'height':750};
+           
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        
+          }
+        </script>
+		<style type="text/css">
+			// CSS goes here
+	body {
+    font-family: Georgia;
+    width: 1000px;
+margin: 30px auto;
+padding-left: 40px;
+padding-right: 40px;
+  }
+
+  h1 {
+    font-family: Georgia;
+    font-weight: 100;
+	font-style: bold
+	font-size: 45px
+    letter-spacing: 0;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    text-align: center;
+  }
+
+p {
+    font-family: Georgia;
+    font-weight: 50;
+    font-size: 20px;
+    letter-spacing: -.5px;
+    margin-bottom:20px;
+	text-align: left;
+	 width: 1000px;
+margin: 30px auto;
+padding-left: 40px;
+padding-right: 40px;
+  }
+
+h2 {
+    font-family: Georgia;
+    font-weight: 25;
+	font-size: 20px
+    letter-spacing: .5px;
+    border-bottom:1px solid #dedede;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    text-align: center;
+	 width: 1000px;
+margin: 30px auto;
+padding-left: 40px;
+padding-right: 40px;
+}
+
+h3{
+ font-family: Georgia;
+    font-weight: 25;
+    letter-spacing: .5px;
+    border-top:1px solid #dedede;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    text-align: center;
+	}
+		div{
+		text-align: center;
+		margin: 30px auto;
+padding-left: 40px;
+padding-right: 40px;
+		
+		}
+		</style>
+      </head>
+
+      <body>
+	  
+	  <h1>In the wait for donor kidneys, a change of plan
+	  </h1>
+	  <h2> by Julia Shu
+	  </h2>
+	  
+	  <p>Last Thursday, the United Network for Organ Sharing, <a href=http://www.unos.org>UNOS</a>, announced changes in procedure for matching donor kidneys with patients. These changes could help African American patients and other racial and ethnic groups who currently experience disproportionately long waiting periods for a donor kidney.
+	  </p>
+	   <a href="5-or-More-Years-5-or-More-Years_chartbuilder.svg">chart</a>
+	  
+	  <p>Broken down by ethnicity, the above chart shows patients who have been waiting for a donor kidney for five or more years. While the majority of patients receive a kidney in one to two years, a disproportionate number of non-white patients wait much longer. For example, 21.3 percent of Pacific Islanders waiting for a kidney wait five or more years, and 15.9 percent of blacks. In contrast, only 11.3 percent of whites wait for this long. 
+	  </p>
+	  <p>
+According to the <a href= http://www.kidneyfund.org/are-you-at-risk/risk-factors/race-kidney-disease/#.VIm94DHF-So>American Kidney Fund,</a> blacks, Hispanics, Asian Americans, and Native Americans are at higher risk for kidney failure because of greater rates of diabetes and high blood pressure. In 2013, 73 percent of blacks who received transplants received <a href=http://organdonor.gov/minortyaa/index.html>kidneys.</a> 
+	</p>
+	<p>
+Kidney matching is determined by a number of factors, medical, logistical, and social. Among these factors are the location of the transplant center and how long a patient has been waiting. The donor and patient must also match in blood type and certain antigens and antibodies passed on genetically. 
+	</p>
+	<p>
+
+<a href= http://www.ncbi.nlm.nih.gov/pubmed/23263585>Studies</a> on racial disparities in organ donation have noted that consent to donate tends to be lower in non-white communities. This lack of respective genetic diversity and the large demand for donor kidneys are both factors in the longer waiting times for non-white patients. For a smaller demographic like Pacific Islanders, the wait for a matching donor kidney is especially lengthy. In California, the state with second highest population of Pacific Islanders, the wait time is even worse than the national average. The majority of patients, 28.1 percent, must wait five or more years.
+</p>
+<p>
+
+But for black patients, the new matching procedures may provide better access to donor kidneys and shorter waiting periods because of the ability to match different blood types. According to UNOS&rsquo; <a href= http://www.unos.org/docs/Kidney_Brochure.pdf> patient brochure,</a> some donors with blood type A have been found to have a subtype that allows them to donate to patients with blood type B. 
+</p>
+<p>
+&ldquo;Since many minorities have blood type B, expanding the blood types from which type B candidates can receive donor kidneys may slightly increase the number of minorities receiving kidney transplants,&rdquo; speculated Tonya Saffer, Senior Federal Health Policy Director at the National Kidney Foundation.
+</p>
+    <div id="chart_div"></div>
+	
+	<p>This pie chart shows the patients with blood type B waiting for a kidney, divided by racial and ethnic groups. Despite the fact that whites are the majority of kidney patients, they only represent about a quarter of those with type B, while blacks represent almost half. 
+	</p>	
+	<p>
+&ldquo;Certainly it will help African Americans,&rdquo; said Joel Newman of UNOS, who noted that type A donors are much more common than type B. He said cross matching these blood types had previously been tested locally, but would now be expanded on a national level. 
+</p>
+<p>
+ In addition to this, the new procedure introduces a system to score donor kidneys based on their estimated longevity, and match longer lasting kidneys with patients expected to need them longer. 
+</p>
+<p>
+&ldquo;For the 20% of kidneys most likely to last the longest, we will match those up first with the patients most likely to need those kidneys for the longest amount of time,&rdquo; said Newman.
+</p>
+<p>
+It is too early to predict how UNOS&rsquo; changes will affect patients with kidney failure, but improvements might be on the way. The National Kidney Foundation and many other organizations continue to encourage all people to consider signing up to be an organ donor. 
+</p>
+<h3> Data provided by UNOS, http://www.unos.org
+</h3>
+
+
+
+      </body>
+    </html>
